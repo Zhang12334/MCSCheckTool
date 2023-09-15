@@ -50,7 +50,7 @@
 
 ### 其他或致谢
 
-本项目遵循[GPL-v3](./LICENSE)开源协议
+本项目遵循 [GPL-v3](./LICENSE) 开源协议
 
 遇到问题请在 [这里](https://gitee.com/lingyunawa/mcschecktool/issues) 提交反馈
 

@@ -1,0 +1,44 @@
+.motd{ color:white; text-align:center; }
+
+.motd-nosupport{ color:red; text-align:center;}
+
+.motd-btn{ margin-left:10px; }
+
+.white{ color:white; }
+
+.main{ left:0; top:60px; margin:30px; }
+
+.reload{ color:blue; cursor:pointer; }
+
+.reload:hover{ color:#0066FF; cursor:pointer; }
+
+.line{ margin-top:20px; margin-bottom:20px; }
+
+.flex{ display:flex; }
+
+.blank{ margin-top:5px; margin-bottom:5px; }
+
+.mu{ transform:translateY(-3px); }
+
+.mu-2{ transform:translateY(-1px) !important; }
+
+.md-1{ transform:translateY(1px); }
+
+.md-2{ transform:translateY(5px); }
+
+.md-3{ transform:translateY(3px); margin-left:5px; }
+
+.error{ color:red; font-size:24px; }
+
+.ly-motd-bg{ border:0px; background-image:url('motd-bg.png'); margin-left:10px; width:290px; height:52px;}
+
+.ly-form{ margin-top:20px; width:695px; }
+
+.ly-form-input{ width:300px; }
+
+.ly-nav{ font-size:20px; margin-left:20px; }
+
+/* Edit layUI */
+.layui-badge{ transform:translateY(-2px); padding: 4px 8px; font-size: 16px !important; }
+
+.layui-nav-item{ cursor:pointer; }

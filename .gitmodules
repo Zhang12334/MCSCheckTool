@@ -1,4 +1,4 @@
 [submodule "testsub"]
 	url  = https://gitee.com/layui/layui
-	path = testsub
+	path = layui
 

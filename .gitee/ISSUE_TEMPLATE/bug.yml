@@ -7,3 +7,24 @@ body:
     attributes:
       value: |
         感谢提出项目中的项目中的 Bug，我们将仔细考虑！
+  - type: textarea
+    id: bug-info
+    attributes:
+      label: 描述此 Bug
+      description: 清晰并简洁地描述遇到的问题
+    validations:
+      required: true
+  - type: textarea
+    id: bug-photo
+    attributes:
+      label: Bug 截图
+      description: 清晰地将遇到的问题截下来
+    validations:
+      required: true 
+  - type: textarea
+    id: bug-log
+    attributes:
+      label: Bug 日志
+      description: 请查阅 [日志获取方式](https://gitee.com/lingyunawa/mcschecktool/how-to-get-console-log.md) 获取并上传
+    validations:
+      required: true 

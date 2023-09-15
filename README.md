@@ -1,39 +1,55 @@
-# MC查服工具
+<p align="center">
+  <img src="./mcschecktool.png" width="100%" height="100%" alt="MCSCheckTool">
+</p>
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+<div align="center">
 
-#### 软件架构
-软件架构说明
+<h1> MCSCheckTool </h1>
 
+</div>
+<br><br>
+<div align="center">
 
-#### 安装教程
+### 项目介绍
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+你还在通过访问 [https://mcapi.us](https://mcapi.us) 或者使用 [MCBBS-[服务器应用][2021.12.6]用网页查看MC服务器中的玩家在线人数](https://www.mcbbs.net/forum.php?mod=viewthread&tid=1281970) 在网页上查看服务器在线人数？
 
-#### 使用说明
+是时候换个更好用的工具了，这就是 MCSCheckTool！
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+在本项目中，你可以直接获取到的有：
 
-#### 参与贡献
+服务器状态 | 服务器人数 | 服务器人数占比 | 服务器 Logo | 服务器 MOTD | 服务器版本 
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+并且，你可以自定义你所想要查询的服务器 IP 和端口，这一切在界面上都可以完成！无需每次更换都打开那烦人的 `JS` 源代码了
 
+<br>
 
-#### 特技
+### 使用方式
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+官方部署源地址为 [https://mcschecktool.rth1.app](https://mcschecktool.rth1.app)
+
+你也可以自己部署该项目，在 [Release](https://gitee.com/lingyunawa/mcschecktool/release) 中下载最新版本后部署到自己的服务器上即可
+
+<br>
+
+### 定制教程
+
+如果你想要部署一个仅能查看指定服务器信息的网站，请查看 [特别教程：固定服务器查询](https://gitee.com/lingyunawa/mcschecktool/blob/master/editguide.md)
+
+<br>
+
+### 免责声明
+
+请勿将本仓库用于以盈利为目的的场景
+
+[layui](https://gitee.com/lingyunawa/mcschecktool/blob/master/layui/) 文件夹下文件不是此项目开发者所创，也与此项目开发者无关。此部分源于 [Layui/layui](https://gitee.com/layui/layui) 仓库
+
+<br>
+
+### 其他或致谢
+
+本项目遵循[GPL-v3](./LICENSE)开源协议
+
+遇到问题请在 [这里](https://gitee.com/lingyunawa/mcschecktool/issues) 提交反馈
+
+您的 Star 是我更新的最大动力！

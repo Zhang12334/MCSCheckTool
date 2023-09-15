@@ -1,6 +1,6 @@
-<p align="center">
+<!-- p align="center">
   <img src="./mcschecktool.png" width="100%" height="100%" alt="MCSCheckTool">
-</p>
+</p -->
 
 <div align="center">
 

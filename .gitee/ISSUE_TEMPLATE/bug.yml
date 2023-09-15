@@ -1,0 +1,9 @@
+name: Bug 反馈
+description: 反馈一个 Bug
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提出项目中的项目中的 Bug，我们将仔细考虑！

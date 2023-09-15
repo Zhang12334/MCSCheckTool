@@ -62,7 +62,7 @@ This section originates from the [Layui/layui](https://gitee.com/layui/layui) re
 
 ### Other or acknowledgements
 
-This project follows the [GPL-v3](./LICENSE) open source license
+This repository is open sourced under the [GPL-v3](./LICENSE) license
 
 If you encounter problems, please submit feedback at [here](https://gitee.com/lingyunawa/mcschecktool/issues)
 

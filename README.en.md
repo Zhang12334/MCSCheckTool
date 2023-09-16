@@ -30,7 +30,7 @@ In this project, you can directly get:
 
 Server Status | Number of players | Percentage of players | Server Logo | Server MOTD | Server version 
 
-And you can customize the server IP and port you want to query, all from ours interface! 
+And you can customize the server IP and port you want to query, all from our interface! 
 
 No need to open that annoying `JS` source code every time you change it
 

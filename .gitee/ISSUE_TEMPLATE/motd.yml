@@ -3,12 +3,20 @@ description: 当你遇到 MOTD 无法解析但是又很想在网页上看到的�
 title: "[MOTD]: "
 labels: ["motd"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ---
   - type: checkboxes
     attributes:
       label: 这个申请是否已经存在？
       options:
         - label: 我已经搜索过现有的 [申请列表](https://gitee.com/lingyunawa/mcschecktool/issues?label_ids=217142779&project_id=lingyunawa%2Fmcschecktool&state=all)
           required: true
+  - type: markdown
+    attributes:
+      value: |
+        ---
   - type: textarea
     attributes:
       label: 服务器IP 和 服务器端口

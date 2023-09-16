@@ -28,6 +28,6 @@
 <li class="layui-nav-item ly-nav" id="nav2" onclick="page2()">配置修改</li>
 ```
 
-4\. 找到 `[EDITGUIDE] ADD XX HERE`，其中 `XX` 可以是 `#1` 或 `#2`，对应 [这里](https://gitee.com/lingyunawa/mcschecktool/EditGuide/editguide.js) 的两段代码
+4\. 找到 `[EDITGUIDE] ADD XX HERE`，其中 `XX` 可以是 `#1` 或 `#2`，对应 [这里](https://gitee.com/lingyunawa/mcschecktool/blob/master/EditGuide/editguide.js) 的两段代码
 
 5\. 配置完成，现在你可以部署属于你自己的服务了

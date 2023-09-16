@@ -24,7 +24,7 @@ function makeRequest(gip,gport) {
 								const ip = gip
 								const port = gport
 								/* - Code for debug - */
-								console.info('API JSON Response:',resp)
+								//console.info('API JSON Response:',resp)
 								//console.info('Server Status:', status);
 								//console.info('Server Version:',version);
 								//console.info('Server MOTD:',motd);
@@ -111,8 +111,9 @@ function reloadall(gip,gport){
 	page1()
 }
 
-/* [EDITGUIDE] REMOVE START */
 function formreload(){
+	/* [EDITGUIDE] ADD #2 HERE */
+	/* [EDITGUIDE] REMOVE START */
 	if(document.getElementById('serverip').value === ''){
 		showwarn('t','f')
 	} else {
@@ -129,6 +130,6 @@ function formreload(){
 	if(document.getElementById('serverip').value !== '' && document.getElementById('serverport').value !== ''){	
 		reloadall(ip,port)
 	}
+	/* [EDITGUIDE] REMOVE END */
 }
-/* [EDITGUIDE] REMOVE END */
 /* ----- [Main] END ------ */

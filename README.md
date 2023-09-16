@@ -38,7 +38,7 @@
 
 ### 定制教程
 
-如果你想要部署一个仅能查看指定服务器信息的网站，请查看 [特别教程：固定服务器查询](https://gitee.com/lingyunawa/mcschecktool/blob/master/editguide.md)
+如果你想要部署一个仅能查看指定服务器信息的网站，请查看 [特别教程：固定服务器查询](https://gitee.com/lingyunawa/mcschecktool/blob/master/EditGuide/editguide.md)
 
 <br>
 

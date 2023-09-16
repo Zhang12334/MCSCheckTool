@@ -46,7 +46,7 @@ You can also deploy the project yourself, the way is download the latest version
 
 ### Custom tutorial
 
-If you want to deploy a Web site that can view only specified server information, check out [Special Tutorial: Fixed Server Query](https://gitee.com/lingyunawa/mcschecktool/blob/master/editguide.en.md)
+If you want to deploy a Web site that can view only specified server information, check out [Special Tutorial: Fixed Server Query](https://gitee.com/lingyunawa/mcschecktool/blob/master/EditGuide/editguide.en.md)
 
 <br>
 

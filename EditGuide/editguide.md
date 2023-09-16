@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./mcschecktool.png" width="100%" height="100%" alt="MCSCheckTool">
+  <img src="https://gitee.com/lingyunawa/mcschecktool/raw/master/mcschecktool.png" width="100%" height="100%" alt="MCSCheckTool">
 </p>
 
 <div align="center">

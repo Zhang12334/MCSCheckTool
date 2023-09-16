@@ -14,7 +14,7 @@ body:
       options:
         - label: 我已经搜索过现有的 [申请列表](https://gitee.com/lingyunawa/mcschecktool/issues?label_ids=217142777&project_id=lingyunawa%2Fmcschecktool&state=all)
           required: true
-- type: markdown
+  - type: markdown
     attributes:
       value: |
         ---

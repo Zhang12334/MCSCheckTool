@@ -2,12 +2,12 @@ layui.use(function(){
 	var $ = layui.$;
 	var layer = layui.layer;
 	var util = layui.util;
-	// ÊÂ¼ş
+	// äº‹ä»¶
 	util.on('lay-on', {
 		'open-sup': function(){
 			layer.open({
 				type: 1,
-				title:'¾ªÏ²',
+				title:'æƒŠå–œ',
 				shadeClose: true,
 				content: $('#sup-layer'),
 			});
@@ -15,7 +15,7 @@ layui.use(function(){
 		'motd-tip': function(){
 			layer.open({
 				type: 1,
-				title:'MOTD ÌáÊ¾',
+				title:'MOTD æç¤º',
 				shadeClose: true,
 				content: $('#motd-layer'),
 				area: ['auto','500px'],
@@ -25,22 +25,22 @@ layui.use(function(){
 })
 
 function opentip(){
-	setTimeout(() => layer.tips('ºÙ£¬µãÕâÀï~', document.getElementById('supbtn')),1000)
+	setTimeout(() => layer.tips('å˜¿ï¼Œç‚¹è¿™é‡Œ~', document.getElementById('supbtn')),1000)
 }
 
 function showtip(){
-	layer.msg('¼ÓÔØ³É¹¦', {icon: 6})
+	layer.msg('åŠ è½½æˆåŠŸ', {icon: 6})
 }
 
 function badresp(){
-	layer.msg('¼ÓÔØÊ§°Ü', {icon: 5})
+	layer.msg('åŠ è½½å¤±è´¥', {icon: 5})
 }
 
 function showwarn(iss,isp){
-	if(iss==='t'){ var warninfo = '·şÎñÆ÷ IP' }
-	if(isp==='t'){ var warninfo = '·şÎñÆ÷¶Ë¿Ú' }
-	if(iss==='t'&&isp==='t'){ var warninfo = '·şÎñÆ÷ IP ºÍ¶Ë¿Ú' }
-	layer.msg('È±Ê§²ÎÊı£º'+warninfo, {icon: 5})
+	if(iss==='t'){ var warninfo = 'æœåŠ¡å™¨ IP' }
+	if(isp==='t'){ var warninfo = 'æœåŠ¡å™¨ç«¯å£' }
+	if(iss==='t'&&isp==='t'){ var warninfo = 'æœåŠ¡å™¨ IP å’Œç«¯å£' }
+	layer.msg('ç¼ºå¤±å‚æ•°ï¼š'+warninfo, {icon: 5})
 }
 
 window.onload(opentip())

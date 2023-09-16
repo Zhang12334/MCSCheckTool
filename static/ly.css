@@ -1,6 +1,6 @@
 .motd{ color:white; text-align:center; }
 
-.motd-nosupport{ color:red; text-align:center;}
+.motd-nosupport{ color:red; text-align:center; height:52px;}
 
 .motd-btn{ margin-left:10px; }
 
@@ -22,7 +22,7 @@
 
 .mu-2{ transform:translateY(-1px) !important; }
 
-.md-1{ transform:translateY(1px); }
+.md-1{ transform:translateY(1px)!important; }
 
 .md-2{ transform:translateY(5px); }
 

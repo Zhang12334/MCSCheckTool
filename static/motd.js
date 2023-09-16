@@ -1,24 +1,24 @@
-/* ----- ¶¨ÖÆº¯Êı ----- */
+/* ----- å®šåˆ¶å‡½æ•° ----- */
 function mc521_cc(){
-	const motd1 = '-----=====[&nbsp;¾ıÍ¥¸ó&nbsp;&nbsp;´¿¾»Éú´æ&nbsp;]=====-----'
-	const motd2 = '&nbsp;ºËĞÄ°æ±¾£º1.20.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¹Ù·½Èº£º5587557'	
+	const motd1 = '-----=====[&nbsp;å›åº­é˜&nbsp;&nbsp;çº¯å‡€ç”Ÿå­˜&nbsp;]=====-----'
+	const motd2 = '&nbsp;æ ¸å¿ƒç‰ˆæœ¬ï¼š1.20.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;å®˜æ–¹ç¾¤ï¼š5587557'	
 	const motd = motd1+'<p>'+motd2
 	return motd
 }
-/* --- ¶¨ÖÆº¯Êı End --- */
+/* --- å®šåˆ¶å‡½æ•° End --- */
 
-/* ----- ½âÎöº¯Êı ----- */
+/* ----- è§£æå‡½æ•° ----- */
 function get_motd(ip,port,motd,motd_json){
 	if( ip==='mc521.cc' && port==='25565' ){
 		return mc521_cc()
 	} else if( ip==='mcfkcs.com' && port==='12345' ){
  		gmotd = motd.split('\n')
-		var patten = new RegExp(/(¡ì[0-9a-fl-or]{1})|\s{2,}/g)
+		var patten = new RegExp(/(Â§[0-9a-fl-or]{1})|\s{2,}/g)
 		motd = gmotd[0].replace(patten,'')
 		motd2 = gmotd[1].replace(patten,'')
-		return '<div class="layui-panel ly-motd-bg"><div style="padding:10px;" class="motd">'+motd+'<p>'+motd2+'</div></div>'
+		return '<div class="layui-panel ly-motd-bg"><div style="padding:5px;" class="motd">'+motd+'<p>'+motd2+'</div></div>'
 	} else {
-		return '<div class="flex"><div class="layui-panel ly-motd-bg"><div style="padding:10px" class="motd-nosupport"><span>´Ë·şÎñÆ÷ MOTD »ñÈ¡Ôİ²»Ö§³Ö<p>Äã¿Éµã»÷ÓÒ²à°´Å¥²éÑ¯Ö§³ÖÁĞ±í</p></span></div></div><button type="button" class="layui-btn motd-btn md-1" lay-on="motd-tip">µã»÷´ò¿ªÌáÊ¾</button></div>'
+		return '<div class="flex"><div class="layui-panel ly-motd-bg"><div style="padding:5px" class="motd-nosupport"><span>æ­¤æœåŠ¡å™¨ MOTD è·å–æš‚ä¸æ”¯æŒ<p>ä½ å¯ç‚¹å‡»å³ä¾§æŒ‰é’®æŸ¥è¯¢æ”¯æŒåˆ—è¡¨</p></span></div></div><button type="button" class="layui-btn motd-btn md-1" lay-on="motd-tip">ç‚¹å‡»æ‰“å¼€æç¤º</button></div>'
 	}
 }
-/* --- ½âÎöº¯Êı End --- */
+/* --- è§£æå‡½æ•° End --- */

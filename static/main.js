@@ -43,25 +43,25 @@ function makeRequest(gip,gport) {
 }
 
 function showprogress(progress,elem){
-	console.log('[Log] showprogress with args£º',progress,elem)
+	console.log('[Log] showprogress with argsï¼š',progress,elem)
 	layui.use(function(){
 		var $ = layui.$;
 		var element = layui.element;
-  		// ¶¯Ì¬²åÈë½ø¶ÈÌõÔªËØ
+  		// åŠ¨æ€æ’å…¥è¿›åº¦æ¡å…ƒç´ 
   		$(elem).html(`<div class="layui-progress" lay-filter="demo-filter-progress"><div class="layui-progress-bar" id="progress" lay-percent="${progress}"></div></div>`);
-  		// äÖÈ¾½ø¶ÈÌõ×é¼ş
+  		// æ¸²æŸ“è¿›åº¦æ¡ç»„ä»¶
   		element.render('progress', 'demo-filter-progress');
 	});
 }
 
 function showprogressred(progress,elem){
-	console.log('[Log] showprogress-red with args£º',progress,elem)
+	console.log('[Log] showprogress-red with argsï¼š',progress,elem)
 	layui.use(function(){
 		var $ = layui.$;
 		var element = layui.element;
-  		// ¶¯Ì¬²åÈë½ø¶ÈÌõÔªËØ
+  		// åŠ¨æ€æ’å…¥è¿›åº¦æ¡å…ƒç´ 
   		$(elem).html(`<div class="layui-progress" lay-filter="demo-filter-progress"><div class="layui-progress-bar layui-bg-red" lay-percent="${progress}"></div></div>`);
-  		// äÖÈ¾½ø¶ÈÌõ×é¼ş
+  		// æ¸²æŸ“è¿›åº¦æ¡ç»„ä»¶
   		element.render('progress', 'demo-filter-progress');
 	});
 }
@@ -71,14 +71,14 @@ function reloadall(gip,gport){
 	xhr.send();
 	makeRequest(gip,gport)
 		.then(({ status,nowplayer,maxplayer,motd,motd_json,version,timestamp,logo,ip,port }) => {
-			document.getElementById('configs').innerHTML = 'IP£º'+ip+'£¬¶Ë¿Ú£º'+port
+			document.getElementById('configs').innerHTML = 'IPï¼š'+ip+'ï¼Œç«¯å£ï¼š'+port
 			document.getElementById('main').setAttribute('style','display:block')
 			if(status===true){
-				document.getElementById('status').innerHTML = '<span class="layui-badge layui-bg-green mu-2">ÔÚÏß</span>';
+				document.getElementById('status').innerHTML = '<span class="layui-badge layui-bg-green md-1">åœ¨çº¿</span>';
 				document.getElementById('logo').innerHTML = '<img class="logo" src="'+logo+'">';
 				if(ip==='mc521.cc'){
 					showprogress(nowplayer+' / 100','#progress1');
-					stplayer = nowplayer+'&nbsp;/&nbsp;100'+'<span style="margin-left:20px;transform:translateY(-12px)"><button type="button" class="layui-btn layui-btn-sm" id="supbtn" lay-on="open-sup">µã»÷´ò¿ª¾ªÏ²</button></span>'
+					stplayer = nowplayer+'&nbsp;/&nbsp;100'+'<span style="margin-left:20px;transform:translateY(-12px)"><button type="button" class="layui-btn layui-btn-sm" id="supbtn" lay-on="open-sup">ç‚¹å‡»æ‰“å¼€æƒŠå–œ</button></span>'
 				} else {
 					showprogress(nowplayer+' / '+maxplayer,'#progress1');
 					stplayer = nowplayer+'&nbsp;/&nbsp;'+maxplayer
@@ -86,15 +86,14 @@ function reloadall(gip,gport){
 				document.getElementById('player').innerHTML = stplayer;
 				show_motd = get_motd(ip,port,motd,motd_json);
 				document.getElementById('motd').innerHTML = show_motd
-				document.getElementById('motd').setAttribute('class','md-2')
 				document.getElementById('version').innerHTML = version;
 			} else {
-				document.getElementById('status').innerHTML = '<span class="layui-badge layui-bg-red mu-2">ÀëÏß</span>';
-				document.getElementById('player').innerHTML = '<span style="color:red">0 / 0</span>';
+				document.getElementById('status').innerHTML = '<span class="layui-badge layui-bg-red md-1">ç¦»çº¿</span>';
+				document.getElementById('player').innerHTML = '<span style="color:red;line-height:34px;">0 / 0</span>';
 				showprogressred('1 / 1','#progress1')
 				document.getElementById('logo').innerHTML = '<img src="stack.png">'
-				document.getElementById('motd').innerHTML = '<div class="layui-panel ly-motd-bg"><div style="padding:10px;color:red">»ñÈ¡·şÎñÆ÷ MOTD Ê§°Ü</div></div>';
-				document.getElementById('version').innerHTML = '<span style="color:red">»ñÈ¡·şÎñÆ÷°æ±¾Ê§°Ü</span>';
+				document.getElementById('motd').innerHTML = '<div class="layui-panel ly-motd-bg"><div style="padding: 0px 10px;color:red;line-height:52px;text-align:center;">è·å–æœåŠ¡å™¨ MOTD å¤±è´¥</div></div>';
+				document.getElementById('version').innerHTML = '<span style="color:red">è·å–æœåŠ¡å™¨ç‰ˆæœ¬å¤±è´¥</span>';
 			}
 			document.getElementById('timestamp').innerHTML = timestamp
 			document.getElementById('error').setAttribute('style','display:none')	

@@ -1,62 +1,63 @@
 <!DOCTYPE HTML>
 <head>
-	<title>MC ·þÎñÆ÷ÊµÊ±×´Ì¬Ãæ°å</title>
-	<link href="./layui/css/layui.css" rel="stylesheet">
+	<title>MC æœåŠ¡å™¨å®žæ—¶çŠ¶æ€é¢æ¿</title>
+	<link href="//unpkg.com/layui@2.8.17/dist/css/layui.css" rel="stylesheet">
 	<link href="./static/ly.css" rel="stylesheet">
+	<meta http-equiv="Content-Security-Policy" content="img-src 'self' https:">
 </head>
 <body onload="opentip();setup();">
 	<div class="layui-layout layui-layout-admin">
 		<div class="layui-header">
 			<ul class="layui-nav layui-bg-cyan">
-				<li class="layui-nav-item ly-nav" id="nav1" onclick="page1()">MC ·þÎñÆ÷ÊµÊ±×´Ì¬Ãæ°å</li>
-				<li class="layui-nav-item ly-nav" id="nav2" onclick="page2()">ÅäÖÃÐÞ¸Ä</li>
+				<li class="layui-nav-item ly-nav" id="nav1" onclick="page1()">MC æœåŠ¡å™¨å®žæ—¶çŠ¶æ€é¢æ¿</li>
+				<li class="layui-nav-item ly-nav" id="nav2" onclick="page2()">é…ç½®ä¿®æ”¹</li>
 			</ul>
 		</div>
 	</div>
 	<div id="page1">
 		<div class="layui-body main">
 			<div class="flex">
-				<span class="layui-font-30" id="welcome">»¶Ó­ÔÚÏß²éÑ¯ MC ·þÎñÆ÷×´Ì¬</span>
-				<span class="layui-font-12 md-3">Äã¿ÉÒÔ<span class="reload" onclick="formreload()">µã»÷ÕâÀï</span>À´ÖØÐÂ»ñÈ¡ÐÅÏ¢£¬ÈôÅäÖÃ¸Ä±ä£¬Ò³Ãæ¸ü¸ÄÐèÒªÔ¼ 10 ÃëµÄÊ±¼ä
-				<p class="layui-font-12 layui-font-red">Îñ±ØÊ¹ÓÃÉÏ·½µÄ¡°µã»÷ÕâÀï¡±°´Å¥À´Ë¢ÐÂAPIÐÅÏ¢£¬ÈôÄãË¢ÐÂÕû¸öÒ³Ãæ£¨°´F5/Ctrl+R£©£¬×Ô¶¨ÒåÅäÖÃ½«ÏûÊ§£¬ÐèÖØÐÂÅäÖÃ£¡</p></span>
+				<span class="layui-font-30" id="welcome">æ¬¢è¿Žåœ¨çº¿æŸ¥è¯¢ MC æœåŠ¡å™¨çŠ¶æ€</span>
+				<span class="layui-font-12 md-3">ä½ å¯ä»¥<span class="reload" onclick="formreload()">ç‚¹å‡»è¿™é‡Œ</span>æ¥é‡æ–°èŽ·å–ä¿¡æ¯ï¼Œè‹¥é…ç½®æ”¹å˜ï¼Œé¡µé¢æ›´æ”¹éœ€è¦çº¦ 10 ç§’çš„æ—¶é—´
+				<p class="layui-font-12 layui-font-red">åŠ¡å¿…ä½¿ç”¨ä¸Šæ–¹çš„â€œç‚¹å‡»è¿™é‡Œâ€æŒ‰é’®æ¥åˆ·æ–°APIä¿¡æ¯ï¼Œè‹¥ä½ åˆ·æ–°æ•´ä¸ªé¡µé¢ï¼ˆæŒ‰F5/Ctrl+Rï¼‰ï¼Œè‡ªå®šä¹‰é…ç½®å°†æ¶ˆå¤±ï¼Œéœ€é‡æ–°é…ç½®ï¼</p></span>
 			</div>
 			<hr class="layui-border-cyan line">
 			<div id="main" style="display:none">
-				<span class="layui-font-24 flex">Ä¿Ç°²éÑ¯µÄ·þÎñÆ÷ÐÅÏ¢£º<div class="md-1" id="configs"></div></span>
+				<span class="layui-font-24 flex">ç›®å‰æŸ¥è¯¢çš„æœåŠ¡å™¨ä¿¡æ¯ï¼š<div class="md-1" id="configs"></div></span>
 				<hr class="layui-border-cyan line">
-				<span class="layui-font-24 flex">·þÎñÆ÷×´Ì¬£º<div id="status"></div></span>
+				<span class="layui-font-24 flex">æœåŠ¡å™¨çŠ¶æ€ï¼š<div id="status"></div></span>
 				<hr class="layui-border-cyan line">
-				<span class="layui-font-24 flex">ÔÚÏßÈËÊý / ×î¶àÈËÊý£º<div class="md-1" id="player"></div></span>
+				<span class="layui-font-24 flex">åœ¨çº¿äººæ•° / æœ€å¤šäººæ•°ï¼š<div class="md-1" id="player"></div></span>
 				<p class="blank">
-				<span class="layui-font-12">×ÜÈËÊýÕ¼±È</span>
+				<span class="layui-font-12">æ€»äººæ•°å æ¯”</span>
 				<div id="progress1"></div>
 				<hr class="layui-border-cyan line">
-				<span class="layui-font-24">·þÎñÆ÷ Logo & MOTD£º</span>
+				<span class="layui-font-24">æœåŠ¡å™¨ Logo & MOTDï¼š</span>
 				<div class="flex">
 					<div id="logo"></div>
 					<div id="motd"></div>
 				</div>
 				<hr class="layui-border-cyan line">
-				<span class="layui-font-24 flex">·þÎñÆ÷°æ±¾£º<div class="layui-font-20 md-1" id="version"></div></span>
+				<span class="layui-font-24 flex">æœåŠ¡å™¨ç‰ˆæœ¬ï¼š<div class="layui-font-20 md-1" id="version"></div></span>
 				<hr class="layui-border-cyan line">
-				<span class="layui-font-24 flex">´ËÐÅÏ¢Ê±¼ä´Á£º<div class="md-1" id="timestamp"></div></span>
+				<span class="layui-font-24 flex">æ­¤ä¿¡æ¯æ—¶é—´æˆ³ï¼š<div class="md-1" id="timestamp"></div></span>
 			</div>
 			<div id="error" style="display:none">
-				<span class="error">´Ó API »ñÈ¡ÐÅÏ¢Ê±Ê§°Ü£¬»òÐíÄã¶àË¢ÐÂ¼¸´Î¾ÍºÃ<p>Ë¢ÐÂÎÞ·¨½â¾öÎÊÌâÊ±£¬Çëµ½<a class="reload">´Ë´¦</a>·´À¡</span>
+				<span class="error">ä»Ž API èŽ·å–ä¿¡æ¯æ—¶å¤±è´¥ï¼Œæˆ–è®¸ä½ å¤šåˆ·æ–°å‡ æ¬¡å°±å¥½<p>åˆ·æ–°æ— æ³•è§£å†³é—®é¢˜æ—¶ï¼Œè¯·åˆ°<a class="reload">æ­¤å¤„</a>åé¦ˆ</span>
 			</div>
 		</div>
 	</div>
 	<div id="page2">
 		<div class="layui-body main">
-			<span class="layui-font-24">ÓÃÏÂÃæµÄ±íµ¥À´ÌîÐ´Òª»ñÈ¡ÐÅÏ¢µÄ·þÎñÆ÷ IP Óë¶Ë¿Ú</span>
+			<span class="layui-font-24">ç”¨ä¸‹é¢çš„è¡¨å•æ¥å¡«å†™è¦èŽ·å–ä¿¡æ¯çš„æœåŠ¡å™¨ IP ä¸Žç«¯å£</span>
 			<div class="layui-panel ly-form" >
 				<div style="padding: 32px;">
 					<div class="layui-form">
 						<div class="flex">
-							<input type="text" id="serverip" placeholder="·þÎñÆ÷ IP" lay-affix="clear" class="layui-input  ly-form-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="number" id="serverport" placeholder="·þÎñÆ÷ PORT | Ä¬ÈÏ 25565" value="25565" step="1" min="0" max="65535" lay-affix="clear" class="layui-input ly-form-input">
+							<input type="text" id="serverip" placeholder="æœåŠ¡å™¨ IP" lay-affix="clear" class="layui-input  ly-form-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="number" id="serverport" placeholder="æœåŠ¡å™¨ PORT | é»˜è®¤ 25565" value="25565" step="1" min="0" max="65535" lay-affix="clear" class="layui-input ly-form-input">
 						</div>
-						<button type="button" class="layui-btn" style="margin-top:20px" onclick="formreload()">È·ÈÏ²¢·µ»ØÖ÷Ò³Ãæ</button>
+						<button type="button" class="layui-btn" style="margin-top:20px" onclick="formreload()">ç¡®è®¤å¹¶è¿”å›žä¸»é¡µé¢</button>
 					</div>
 				</div>
 			</div>
@@ -66,32 +67,33 @@
 	<!-- Popout (Hide) -->
 	<div id="sup-layer" style="display: none;">
 		<div style="padding:16px;">
-			<img style="width:467px;height:85.5px" src="./static/cc.png" alt="CC£ººóÃæ²»ÆÆ°ÙÈË£¬Ò»Ö±ÓÐ·ÉÐÐ">
+			<img style="width:467px;height:85.5px" src="./static/cc.png" alt="CCï¼šåŽé¢ä¸ç ´ç™¾äººï¼Œä¸€ç›´æœ‰é£žè¡Œ">
   		</div>
 	</div>
 
 	<div id="motd-layer" style="display: none;">
 		<div style="padding:16px;">
-			<span class="layui-font-20">ÓÉÓÚ²»Í¬·þÎñÆ÷ÔÚ api ÖÐ²éÑ¯µ½µÄ MOTD ±¨ÎÄ½á¹¹²»Í¬<p>Ä¿Ç°²ÉÈ¡µÄÊÇ¶ÔÃ¿¸ö·þÎñÆ÷½øÐÐÁ¿Éí¶¨ÖÆ½âÎö·½Ê½<p>ÏÂ·½Îª¶ÔÓ¦·þÎñÆ÷µÄ MOTD ½âÎöÖÆ×÷×´Ì¬</span>
+			<span class="layui-font-20">ç”±äºŽä¸åŒæœåŠ¡å™¨åœ¨ api ä¸­æŸ¥è¯¢åˆ°çš„ MOTD æŠ¥æ–‡ç»“æž„ä¸åŒ<p>ç›®å‰é‡‡å–çš„æ˜¯å¯¹æ¯ä¸ªæœåŠ¡å™¨è¿›è¡Œé‡èº«å®šåˆ¶è§£æžæ–¹å¼<p>ä¸‹æ–¹ä¸ºå¯¹åº”æœåŠ¡å™¨çš„ MOTD è§£æžåˆ¶ä½œçŠ¶æ€</span>
   			<table class="layui-table">
 				<colgroup>
 					<col width="150">
 					<col width="150">
 				</colgroup>
-				<thead><tr><th>·þÎñÆ÷µØÖ·</th><th>×´Ì¬</th></tr></thead>
+				<thead><tr><th>æœåŠ¡å™¨åœ°å€</th><th>çŠ¶æ€</th></tr></thead>
 				<tbody>
-					<tr><td>mc521.cc:25565</td><td><span class="layui-badge layui-bg-green">ÒÑÉÏÏß</span></td></tr>
-					<tr><td>mcfkcs.com:12345</td><td><span class="layui-badge layui-bg-green">ÒÑÉÏÏß</span></td></tr>
-					<tr><td>Lcmc.cc</td><td><span class="layui-badge">ÖÆ×÷ÖÐ</span></td></tr>
+					<tr><td>mc521.cc:25565</td><td><span class="layui-badge layui-bg-green">å·²ä¸Šçº¿</span></td></tr>
+					<tr><td>mcfkcs.com:12345</td><td><span class="layui-badge layui-bg-green">å·²ä¸Šçº¿</span></td></tr>
+					<tr><td>Lcmc.cc</td><td><span class="layui-badge">åˆ¶ä½œä¸­</span></td></tr>
 					<!-- Template <tr><td> </td><td><span class="layui-badge layui-bg- "> </span></td></tr> -->
 				</tbody>
 			</table>
-			<span class="layui-font-20">ÈçÐèÉêÇëÖÆ×÷Ö¸¶¨·þÎñÆ÷ MOTD ½âÎö¹¦ÄÜ<p>Çëµ½<a class="reload" class="layui-font-blue">ÕâÀï</a>Ìá½»·´À¡</span>
+			<span class="layui-font-20">å¦‚éœ€ç”³è¯·åˆ¶ä½œæŒ‡å®šæœåŠ¡å™¨ MOTD è§£æžåŠŸèƒ½<p>è¯·åˆ°<a class="reload" class="layui-font-blue">è¿™é‡Œ</a>æäº¤åé¦ˆ</span>
 		</div>
 	</div>
 	<!-- JS Files -->
-	<script src="./layui/layui.js"></script>
+	<script src="//unpkg.com/layui@2.8.17/dist/layui.js"></script>
 	<script src="./static/page.js"></script>
 	<script src="./static/motd.js"></script>
 	<script src="./static/main.js"></script>
+	<script src="./static/damn.js"></script>
 </body>

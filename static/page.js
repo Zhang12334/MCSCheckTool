@@ -36,15 +36,17 @@ function badresp(){
 	layer.msg('加载失败', {icon: 5})
 }
 
+/* [EDITGUIDE] REMOVE START */
 function showwarn(iss,isp){
 	if(iss==='t'){ var warninfo = '服务器 IP' }
 	if(isp==='t'){ var warninfo = '服务器端口' }
 	if(iss==='t'&&isp==='t'){ var warninfo = '服务器 IP 和端口' }
 	layer.msg('缺失参数：'+warninfo, {icon: 5})
 }
+/* [EDITGUIDE] REMOVE END */
 
 window.onload(opentip())
-
+/* [EDITGUIDE] REMOVE START */
 /* --------------------------------- */
 
 function setup(){
@@ -69,3 +71,4 @@ function page2(){
 }
 
 window.onload(setup())
+/* [EDITGUIDE] REMOVE END */

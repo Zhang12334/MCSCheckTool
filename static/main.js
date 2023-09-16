@@ -14,25 +14,25 @@ function makeRequest(gip,gport) {
                 		if (xhr.status === 200) {
                     			const resp = JSON.parse(xhr.responseText);
                     			const status = resp['online'];
-					const nowplayer = resp['players']['now'];
-					const maxplayer = resp['players']['max'];
-					const motd = resp['motd'];
-					const motd_json = resp['motd_json']
-					const version = resp['server']['name'];
-					const timestamp = resp['last_updated'];
-					const logo = resp['favicon']
-					const ip = gip
-					const port = gport
-					/* - Code for debug - */
-					console.info('API JSON Response:',resp)
-					//console.info('Server Status:', status);
-					//console.info('Server Version:',version);
-					//console.info('Server MOTD:',motd);
-					//console.info('Players Online:', nowplayer);
-					//console.info('Players Max:',maxplayer);
-					//console.info('Server Logo',logo);
-					//console.info('Info Timestamp:',timestamp);
-					/* ------ END ------- */
+								const nowplayer = resp['players']['now'];
+								const maxplayer = resp['players']['max'];
+								const motd = resp['motd'];
+								const motd_json = resp['motd_json']
+								const version = resp['server']['name'];
+								const timestamp = resp['last_updated'];
+								const logo = resp['favicon']
+								const ip = gip
+								const port = gport
+								/* - Code for debug - */
+								console.info('API JSON Response:',resp)
+								//console.info('Server Status:', status);
+								//console.info('Server Version:',version);
+								//console.info('Server MOTD:',motd);
+								//console.info('Players Online:', nowplayer);
+								//console.info('Players Max:',maxplayer);
+								//console.info('Server Logo',logo);
+								//console.info('Info Timestamp:',timestamp);
+								/* ------ END ------- */
                     			resolve({ status,nowplayer,maxplayer,motd,motd_json,version,timestamp,logo,ip,port });
                 		} else {
                     			reject(new Error('Request failed'));
@@ -65,6 +65,8 @@ function showprogressred(progress,elem){
   		element.render('progress', 'demo-filter-progress');
 	});
 }
+
+/* [EDITGUIDE] ADD #1 HERE */
 
 function reloadall(gip,gport){
 	xhr.open('GET', 'http://mcapi.us/server/status?ip='+gip+'&port='+gport, true); 
@@ -109,6 +111,7 @@ function reloadall(gip,gport){
 	page1()
 }
 
+/* [EDITGUIDE] REMOVE START */
 function formreload(){
 	if(document.getElementById('serverip').value === ''){
 		showwarn('t','f')
@@ -127,4 +130,5 @@ function formreload(){
 		reloadall(ip,port)
 	}
 }
+/* [EDITGUIDE] REMOVE END */
 /* ----- [Main] END ------ */

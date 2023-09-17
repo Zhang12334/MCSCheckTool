@@ -11,7 +11,7 @@ body:
     attributes:
       label: 这个申请是否已经存在？
       options:
-        - label: 我已经搜索过现有的 [申请列表](https://github.com/lingyunawa/MCSCheckTool/issues?q=is%3Aissue+is%3Aopen+label%3Amotd)
+        - label: 我已经搜索过现有的 [申请列表](https://gitee.com/lingyunawa/mcschecktool/issues?label_ids=217142779&project_id=lingyunawa%2Fmcschecktool&state=all)
           required: true
   - type: markdown
     attributes:

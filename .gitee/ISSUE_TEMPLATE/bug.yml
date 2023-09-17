@@ -36,6 +36,6 @@ body:
     id: bug-log
     attributes:
       label: Bug 日志
-      description: 请查阅 [日志获取方式](https://gitee.com/lingyunawa/mcschecktool/how-to-get-console-log.md) 获取并上传
+      description: 请查阅 [日志获取方式](https://gitee.com/lingyunawa/mcschecktool/blob/master/how-to-get-console-log.md) 获取并上传
     validations:
       required: true 
